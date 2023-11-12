@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+  <title>Sumativa - Screen Splash / Home Splash</title>
+ 
+
+  <!-- Otros encabezados de seguridad -->
+  
+  <style>
+    /* Estilos para animación de transición */
+    #splash-screen {
+      /* Estilos para pantalla de Splash */
+    }
+
+    #home-screen {
+      /* Estilos para pantalla de inicio (pueden ser similares a los de Splash) */
+      animation: fadeIn 1s ease-in-out forwards;
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  
+    :root {
+  --main-color: #db960e;;
+  --main-modal-color: rgba(236, 163, 7, 0.797)
+  --second-color: #2B2B2B;
+  --second-modal-color: rgba(43, 43, 43, .5);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 2rem auto;
+  overflow-x: hidden;
+  max-width: 800px;
+}
+
+a {
+  font-weight: bold;
+  color: var(--second-color);
+  transition: all .3s ease-out;
+}
+
+a:hover {
+  color: var(--second-modal-color);
+}
+
+p {
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+::selection {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Header h1 { word-wrap: break-word; }
+
+.Header img {
+  margin: 0 auto;
+  display: block;
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.Header nav {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 3rem;
+}
+
+.Main {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+.Main iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+    P{
+
+    text-align: justify;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div id="splash-screen">
+    <!-- Contenido de la pantalla de Splash -->
+    <img src="images/splash/image-exodus.gif" alt="Splash Image">
+  </div>
+
+  <div id="home-screen">
+    <!-- Contenido de la pantalla de inicio -->
+
+    <nav class="navbar navbar-expand-lg" >
+      <br>
+      <div class="container">
+        <a class="navbar-brand" href="#">Exodus System ®</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="#">¿Quiénes somos</a>
+            <a class="nav-link active" href="#">Misión</a>
+            <a class="nav-link active" href="#">Visión</a>
+            <a class="nav-link active" href="#">Contáctanos</a>
+            <a class="nav-link active" href="#">Ayuda</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <br>
+    
+    
+    <meta name="description" content="Bienvenido a nuestra segunda evalución de la materia de apps web progresivas:)">
+  <!--Meta etiqueta para pintar barra de dirección-->
+    <meta name="theme-color" content="#5970BF">
+    <!--Meta etiqueta para decir que la app esta optimizada para moviles-->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <!--Meta etiqueta para los dispositivos de apple-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--Meta etiqueta para mandar a llamar a nuesro favicon-->
+    <link rel="shortcut icon" type="image/png" href="img/pwa.png">
+    <link rel="apple-touch-icon" href="img/pwa.png">
+    <!--Meta etiqueta para mostrar la imagen de nuestro logo personal-->
+    <link rel="apple-touch-startup-image" href="img/pwa.png">
+    <!--Meta etiqueta para mandar a llamar a nuestro archivo manifest -->
+    <link rel="manifest" href="./manifest.json">
+  
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    <header class="Header">
+      <h1>¿Qué son las PWA?</h1>
+      
+      <p>
+        Las aplicaciones web progresivas son una evolución natural de las aplicaciones web que difuminan la barrera entre
+        la web y las aplicaciones, pudiendo realizar tareas que generalmente solo las aplicaciones nativas podían llevar a
+        cabo. Algunos ejemplos son las notificaciones, el funcionamiento sin conexión a Internet o la posibilidad de
+        probar una versión más ligera antes de bajarte una aplicación nativa de verdad.
+      </p>
+      <h1>¿Ya nos sigues en nuestras redes sociales?</h1>
+      <nav>
+        
+        <a href="https://www.youtube.com/playlist?list=PLvq-jIkSeTUbJFWQx8gcy1MK0lTLrdLR9" target="_blank"
+          title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://facebook.com/programadorfitness" target="_blank" title="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/explore/tags/ProgramadorFitness/" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </nav>
+    </header>
+    <main class="Main">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9oQIylJ-JpU" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </main>
+
+    <br>
+    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+      <strong>All rights reserved Exodus System © </strong>
+   </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
